@@ -1,4 +1,4 @@
-@import "bootstrap/scss/bootstrap";
+
 
 .jumbotron {
     background-image: url('img/events.jpg');
@@ -6,11 +6,13 @@
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+    margin-bottom: 0 !important;
   }
 
 #event_list li:hover {
-    color:aliceblue;
+    color:aliceblue !important;
     transform: scale(1.1);
+    text-decoration: none;
 }
 
   @media only screen and (min-width: 576px) { 
