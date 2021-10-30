@@ -1,0 +1,45 @@
+
+<div class="justify-content-center mx-auto">
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="text-center">Bilety</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Imie</th>
+        <th scope="col">Miejsce</th>
+        <th scope="col">Adres</th>
+        <th scope="col">Cena</th>
+        <th scope="col">Adres email</th>
+        <th scope="col">Numer telefonu</th>
+        <th scope="col">Numer eventu</th>
+        <th scope="col" colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @tickets.each do |ticket| %>
+        <tr>
+          <td><%= ticket.name %></td>
+          <td><%= ticket.seat_id_seq %></td>
+          <td><%= ticket.address %></td>
+          <td><%= ticket.price %></td>
+          <td><%= ticket.email_address %></td>
+          <td><%= ticket.phone %></td>
+          <td><%= ticket.event_id %></td>
+          <td><%= link_to 'Pokaż', ticket %></td>
+          <% if (user_signed_in?) && (ticket.user == current_user) %>
+            <td><%= link_to 'Edytuj', edit_ticket_path(ticket) %></td>
+            <td><%= link_to 'Usuń', ticket, method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć bilet?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <p class="navbar-text mb-0">
+    <button type="button" class="btn btn-info"><%= link_to 'Nowy bilet', new_ticket_path, :class => 'text-decoration-none text-reset' %></button>
+  </p>
+  
+</div>

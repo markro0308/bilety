@@ -1,0 +1,56 @@
+<%= form_with(model: ticket) do |form| %>
+  <% if ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+        <% ticket.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  <%= form.label :"numer eventu" %>
+  <%= form.text_field :event_id %>
+  </div>
+
+  <div class="field">
+  <%= form.hidden_field :user_id %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :imie %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :miejsce %>
+    <%= form.text_field :seat_id_seq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adres %>
+    <%= form.text_area :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cena %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"adres email" %>
+    <%= form.text_field :email_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"numer telefonu" %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :"Zapisz bilet", class:'btn btn-info link' %>
+  </div>
+<% end %>

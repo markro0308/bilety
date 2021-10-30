@@ -1,0 +1,12 @@
+<div class="d-flex flex-column justify-content-center mx-auto" >
+    <h1>Edycja biletu</h1>
+
+    <%= render 'form', ticket: @ticket %>
+
+    <p class="navbar-text mb-0">
+        <button type="button" class="btn btn-info"><%= link_to 'Pokaż', @ticket, :class => 'text-decoration-none text-reset' %></button> |
+        <button type="button" class="btn btn-info"><%= link_to 'Wstecz', tickets_path, :class => 'text-decoration-none text-reset' %></button>
+    </p>
+
+    <%= render 'events_list' %>
+</div>

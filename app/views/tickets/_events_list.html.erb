@@ -1,0 +1,8 @@
+<div class="d-flex flex-column justify-content-center mx-auto" >
+    <h1>Wszystkie wydarzenia</h1>
+    <ul>
+        <% for event in Event.all %>
+            <li><%= link_to event.artist, event %></li>
+        <%end%>
+    </ul>
+</div>

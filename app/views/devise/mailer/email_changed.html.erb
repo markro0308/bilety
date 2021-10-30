@@ -1,0 +1,9 @@
+<div class="d-flex flex-column justify-content-center mx-auto" >
+  <p>Witaj <%= @email %>!</p>
+
+  <% if @resource.try(:unconfirmed_email?) %>
+    <p>Kontaktujemy się z Tobą, aby powiadomić Cię, że Twój adres e-mail jest zmieniany na <%= @resource.unconfirmed_email %>.</p>
+  <% else %>
+    <p>Kontaktujemy się z Tobą, aby powiadomić Cię, że Twój adres e-mail został zmieniony na <%= @resource.email %>.</p>
+  <% end %>
+</div>

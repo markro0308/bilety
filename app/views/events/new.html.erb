@@ -1,0 +1,9 @@
+<div class="d-flex flex-column justify-content-center mx-auto" >
+    <h1>Nowe wydarzenie</h1>
+
+    <%= render 'form', event: @event %>
+
+    <p class="navbar-text mb-0">
+        <button type="button" class="btn btn-info"><%= link_to 'Wstecz', events_path, :class => 'text-decoration-none text-reset' %></button>
+    </p>
+</div>

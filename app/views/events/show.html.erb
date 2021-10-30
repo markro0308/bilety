@@ -1,0 +1,45 @@
+<div class="d-flex flex-column justify-content-center mx-auto" >
+  <p id="komunikat"><%= flash[:komunikat] %></p>
+
+  <p>
+    <strong>Numer eventu:</strong>
+    <%= @event.id %>
+  </p>
+
+  <p>
+    <strong>Wykonawca:</strong>
+    <%= @event.artist %>
+  </p>
+
+  <p>
+    <strong>Opis wydarzenia:</strong>
+    <%= @event.description %>
+  </p>
+
+  <p>
+    <strong>Najniższa cena:</strong>
+    <%= @event.price_low %>
+  </p>
+
+  <p>
+    <strong>Najwyższa cena:</strong>
+    <%= @event.price_high %>
+  </p>
+
+  <p>
+    <strong>Data wydarzenia:</strong>
+    <%= @event.event_date %>
+  </p>
+
+  <p class="navbar-text mb-0">
+    <button type="button" class="btn btn-info"><%= link_to 'Wstecz', events_path, :class => 'text-decoration-none text-reset' %></button>
+  </p>
+
+</div>
+
+  <% if !user_signed_in? %>
+    <strong class="text-center">Aby kupić bilet musisz się zalogować</strong> 
+  <% else %>
+    <%=render "new_ticket", ticket: current_user.tickets.new( :event_id=>@event.id) %>
+  <% end %>
+  <%=render "tickets_list" %>

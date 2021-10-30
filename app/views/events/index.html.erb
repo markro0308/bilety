@@ -1,0 +1,16 @@
+
+
+    <section id="picture" class="jumbotron jumbotron-fluid w-100">           
+        <div id="event_list" class="d-flex flex-column text-info align-items-center" >
+            <h1 class="p-4 display-6 fw-bold">Wszystkie wydarzenia</h1>
+            <ul>
+                <% for event in @events %>
+                    <li><%= link_to event.artist, event, :class => 'text-decoration-none text-reset fs-5' %></li>
+                <%end%>
+            </ul>
+            <p class="mb-0">
+                <button type="button" class="btn btn-info"><%=link_to 'Nowe ogłoszenie', new_event_path, :class => 'text-decoration-none text-reset' %></button>
+            </p>
+        </div>
+    </section>
+
