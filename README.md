@@ -26,9 +26,9 @@ Opis konfiguracji środowiska i uruchomienia projektu:
     Po zainstalowaniu Ruby następnie w konsoli wpisujemy komendę:
         -> gem install rails
 
-3. Wypakuj plik "wspolnota_mieszkaniowa.zip".
+3. Wypakuj plik "bilety.zip".
    
-4. W edytorze kodu np. Visual Studio Code otwieramy folder wspolnota_mieszkaniowa.
+4. W edytorze kodu np. Visual Studio Code otwieramy folder bilety.
 
 5. Po załadowaniu projektu w edytorze uruchamiamy terminal i wpisujemy komendnę, która zaktualizuje potrzebne komponenty apliakcji:
         -> bundle install
