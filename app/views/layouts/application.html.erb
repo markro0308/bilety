@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
           <ul class="navbar-nav" id="navScrollspy2">
             <li class="nav-item font-weight-bold">
-              <%= link_to 'Strona główna', 'index.html', :class => 'nav-link text-decoration-none text-info' %>
+              <%= link_to 'Strona główna', '/index.html', :class => 'nav-link text-decoration-none text-info' %>
             </li>
             <li class="nav-item font-weight-bold">
               <%= link_to 'Bilety', tickets_path, :class => 'nav-link text-decoration-none text-info' %>
@@ -70,10 +70,10 @@
       </nav>
 
       <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <p class="alert alert-success my_alert"><%= notice %></p>
       <% end %>
       <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <p class="alert alert-danger my_alert"><%= alert %></p>
       <% end %>
 
       <%= yield %>

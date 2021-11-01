@@ -1,7 +1,6 @@
 
 <section class="jumbotron4 jumbotron-fluid w-100"> 
   <div class="main_content container d-flex flex-column align-items-center mx-auto" >
-    <p id="notice"><%= notice %></p>
 
     <p>
       <strong>Numer eventu:</strong>
@@ -18,27 +17,30 @@
       <%= @ticket.seat_id_seq %>
     </p>
 
-    <p>
-      <strong>Adres:</strong>
-      <%= @ticket.address %>
-    </p>
+    <% if (user_signed_in?) && (@ticket.user == current_user) %>
+      <p>
+        <strong>Adres:</strong>
+        <%= @ticket.address %>
+      </p>
+    <% end %>
 
     <p>
       <strong>Cena:</strong>
       <%= @ticket.price %>
     </p>
 
-    <p>
-      <strong>Adres email:</strong>
-      <%= @ticket.email_address %>
-    </p>
+    <% if (user_signed_in?) && (@ticket.user == current_user) %>
+      <p>
+        <strong>Adres email:</strong>
+        <%= @ticket.email_address %>
+      </p>
 
-    <p>
-      <strong>Numer telefonu:</strong>
-      <%= @ticket.phone %>
-    </p>
+      <p>
+        <strong>Numer telefonu:</strong>
+        <%= @ticket.phone %>
+      </p>
+    <% end %>
     
-
     <p class="navbar-text mb-0">
     <% if @ticket.user == current_user %>
       <button type="button" class="btn btn-info"><%= link_to 'Edycja', edit_ticket_path(@ticket), :class => 'text-decoration-none text-dark' %></button>

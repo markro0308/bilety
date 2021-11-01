@@ -7,7 +7,6 @@ class Ticket < ApplicationRecord
     belongs_to:event
     belongs_to:user
     validate:price_must_fit_the_range
-  #  validate:all_tickets_sold
 
     def price_must_fit_the_range
       if !price.nil?
@@ -17,11 +16,6 @@ class Ticket < ApplicationRecord
       end
     end
 
-   # def all_tickets_sold
-   #     if Event.count(:conditions 'id=>ticket.event_id') > 2
-   #        errors.add('Bilety na ten koncert', 'zostały wyprzedane')
-   #     end
-  #  end
 
 
 end

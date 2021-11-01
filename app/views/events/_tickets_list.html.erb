@@ -8,10 +8,7 @@
         <tr>
           <th>Imie</th>
           <th>Miejsce</th>
-          <th>Adres</th>
           <th>Cena</th>
-          <th>Adres email</th>
-          <th>Numer telefonu</th>
           <th>Numer eventu</th>
           <th colspan="3"></th>
         </tr>
@@ -22,15 +19,15 @@
           <tr>
             <td><%= ticket.name %></td>
             <td><%= ticket.seat_id_seq %></td>
-            <td><%= ticket.address %></td>
             <td><%= ticket.price %></td>
-            <td><%= ticket.email_address %></td>
-            <td><%= ticket.phone %></td>
             <td><%= ticket.event_id %></td>
             <td><%= link_to 'Pokaż', ticket, :class => 'text-info' %></td>
             <% if (user_signed_in?) && (ticket.user == current_user) %>
               <td><%= link_to 'Edytuj', edit_ticket_path(ticket), :class => 'text-info' %></td>
               <td><%= link_to 'Usuń', ticket, method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć bilet?' }, :class => 'text-info' %></td>
+            <% else %>
+              <td></td>
+              <td></td>
             <% end %>
           </tr>
         <% end %>
