@@ -1,9 +1,11 @@
-<div class="d-flex flex-column justify-content-center mx-auto" >
-  <p>Witaj <%= @email %>!</p>
+<section class="jumbotron5 jumbotron-fluid w-100">
+  <div class="main_content d-flex flex-column align-items-center mx-auto" >
+    <p>Witaj <%= @email %>!</p>
 
-  <% if @resource.try(:unconfirmed_email?) %>
-    <p>Kontaktujemy się z Tobą, aby powiadomić Cię, że Twój adres e-mail jest zmieniany na <%= @resource.unconfirmed_email %>.</p>
-  <% else %>
-    <p>Kontaktujemy się z Tobą, aby powiadomić Cię, że Twój adres e-mail został zmieniony na <%= @resource.email %>.</p>
-  <% end %>
-</div>
+    <% if @resource.try(:unconfirmed_email?) %>
+      <p>Skontaktujemy się z Tobą, aby powiadomić Cię, że Twój adres e-mail jest zmieniany na <%= @resource.unconfirmed_email %>.</p>
+    <% else %>
+      <p>Skontaktujemy się z Tobą, aby powiadomić Cię, że Twój adres e-mail został zmieniony na <%= @resource.email %>.</p>
+    <% end %>
+  </div>
+</section>

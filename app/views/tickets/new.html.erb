@@ -1,11 +1,13 @@
-<div class="d-flex flex-column justify-content-center mx-auto" >
-    <h1>Nowy bilet</h1>
+<section class="jumbotron4 jumbotron-fluid w-100"> 
+    <div class="main_content container d-flex flex-column align-items-center mx-auto" >
+        <h1>Nowy bilet</h1>
 
-    <%= render 'form', ticket:@ticket %>
+        <%= render 'form', ticket:@ticket %>
 
-    <p class="navbar-text mb-0">
-        <button type="button" class="btn btn-info"><%= link_to 'Wstecz', tickets_path, :class => 'text-decoration-none text-reset' %></button>
-    </p>
+        <p class="navbar-text mb-0">
+            <button type="button" class="btn btn-info"><%= link_to 'Wstecz', tickets_path, :class => 'text-decoration-none text-dark' %></button>
+        </p>
 
-    <%= render 'events_list' %>
-</div>
+        <%= render 'events_list' %>
+    </div>
+</section>

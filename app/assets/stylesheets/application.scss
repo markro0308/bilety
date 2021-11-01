@@ -9,15 +9,51 @@
     margin-bottom: 0 !important;
   }
 
-#event_list li:hover {
-    color:aliceblue !important;
-    transform: scale(1.1);
-    text-decoration: none;
+  
+.jumbotron2 {
+  background-image: url('img/events2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin-bottom: 0 !important;
 }
 
-  @media only screen and (min-width: 576px) { 
+.jumbotron3 {
+  background-image: url('img/tickets.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin-bottom: 0 !important;
+}
 
-    #event_list {
-        margin-top:15vh;
-    }
-  }
+.jumbotron4 {
+  background-image: url('img/tickets3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin-bottom: 0 !important;
+}
+
+.jumbotron5 {
+  background-image: url('img/devise.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin-bottom: 0 !important;
+}
+
+#event_list li:hover {
+    transform: scale(1.1);
+}
+
+.main_content {
+  margin-top:15vh;
+}
+
+.new_field label {
+  width: 120px;
+}

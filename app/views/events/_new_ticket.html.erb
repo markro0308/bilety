@@ -1,4 +1,4 @@
-<div class="d-flex flex-column justify-content-center mx-auto" >
+<div class="container d-flex flex-column align-items-center mx-auto" >
   <h1>Nowy bilet</h1>
 
   <%= form_with(model: ticket) do |form| %>
@@ -22,38 +22,38 @@
       <%= form.hidden_field :user_id %>
       </div>
 
-      <div class="field">
+      <div class="field new_field">
         <%= form.label :imie %>
         <%= form.text_field :name %>
       </div>
     
-      <div class="field">
+      <div class="field new_field">
         <%= form.label :miejsce %>
         <%= form.text_field :seat_id_seq %>
       </div>
     
-      <div class="field">
+      <div class="field new_field">
         <%= form.label :adres %>
         <%= form.text_area :address %>
       </div>
     
-      <div class="field">
+      <div class="field new_field">
         <%= form.label :cena %>
         <%= form.text_field :price %>
       </div>
     
-      <div class="field">
+      <div class="field new_field">
         <%= form.label :"adres email" %>
         <%= form.text_field :email_address %>
       </div>
     
-      <div class="field">
+      <div class="field new_field">
         <%= form.label :"numer telefonu" %>
         <%= form.text_field :phone %>
       </div>
     
-      <div class="actions">
-        <%= form.submit :"Zapisz bilet", class:'btn btn-info link' %>
+      <div class="actions text-center mt-2">
+        <%= form.submit :"Zapisz bilet", class:'btn btn-info text-dark' %>
       </div>
   <% end %>
 </div> 

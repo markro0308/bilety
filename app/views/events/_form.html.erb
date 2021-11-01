@@ -11,33 +11,33 @@
       </div>
     <% end %>
   
-    <div class="field">
+    <div class="field new_field">
       <%= form.label :wykonawca %>
       <%= form.text_field :artist %>
     </div>
   
-    <div class="field">
+    <div class="field new_field">
       <%= form.label :"opis wydarzenia" %>
       <%= form.text_field :description %>
     </div>
   
-    <div class="field">
+    <div class="field new_field">
       <%= form.label :"najniższa cena" %>
-      <%= form.text_area :price_low %>
+      <%= form.text_field :price_low %>
     </div>
   
-    <div class="field">
+    <div class="field new_field">
       <%= form.label :"najwyższa cena" %>
       <%= form.text_field :price_high %>
     </div>
   
-    <div class="field">
+    <div class="field new_field">
       <%= form.label :"data wydarzenia" %>
       <%= form.date_field :event_date %>
     </div>
 
-    <div class="actions">
-      <%= form.submit :"Zapisz wydarzenie", class:'btn btn-info link' %>
+    <div class="actions text-center">
+      <%= form.submit :"Zapisz wydarzenie", class:'btn btn-info text-dark' %>
     </div>
   <% end %>
   

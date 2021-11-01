@@ -1,47 +1,50 @@
-<div class="d-flex flex-column justify-content-center mx-auto" >
-  <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Numer eventu:</strong>
-    <%= @ticket.event_id %>
-  </p>
+<section class="jumbotron4 jumbotron-fluid w-100"> 
+  <div class="main_content container d-flex flex-column align-items-center mx-auto" >
+    <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Imie:</strong>
-    <%= @ticket.name %>
-  </p>
+    <p>
+      <strong>Numer eventu:</strong>
+      <%= @ticket.event_id %>
+    </p>
 
-  <p>
-    <strong>Miejsce:</strong>
-    <%= @ticket.seat_id_seq %>
-  </p>
+    <p>
+      <strong>Imie:</strong>
+      <%= @ticket.name %>
+    </p>
 
-  <p>
-    <strong>Adres:</strong>
-    <%= @ticket.address %>
-  </p>
+    <p>
+      <strong>Miejsce:</strong>
+      <%= @ticket.seat_id_seq %>
+    </p>
 
-  <p>
-    <strong>Cena:</strong>
-    <%= @ticket.price %>
-  </p>
+    <p>
+      <strong>Adres:</strong>
+      <%= @ticket.address %>
+    </p>
 
-  <p>
-    <strong>Adres email:</strong>
-    <%= @ticket.email_address %>
-  </p>
+    <p>
+      <strong>Cena:</strong>
+      <%= @ticket.price %>
+    </p>
 
-  <p>
-    <strong>Numer telefonu:</strong>
-    <%= @ticket.phone %>
-  </p>
-  
+    <p>
+      <strong>Adres email:</strong>
+      <%= @ticket.email_address %>
+    </p>
 
-  <p class="navbar-text mb-0">
-  <% if @ticket.user == current_user %>
-    <button type="button" class="btn btn-info"><%= link_to 'Edycja', edit_ticket_path(@ticket), :class => 'text-decoration-none text-reset' %></button> |
-  <% end %>
-  <button type="button" class="btn btn-info"><%= link_to 'Wstecz', tickets_path, :class => 'text-decoration-none text-reset' %></button>
-  </p>
+    <p>
+      <strong>Numer telefonu:</strong>
+      <%= @ticket.phone %>
+    </p>
+    
 
-</div>
+    <p class="navbar-text mb-0">
+    <% if @ticket.user == current_user %>
+      <button type="button" class="btn btn-info"><%= link_to 'Edycja', edit_ticket_path(@ticket), :class => 'text-decoration-none text-dark' %></button>
+    <% end %>
+    <button type="button" class="btn btn-info"><%= link_to 'Wstecz', tickets_path, :class => 'text-decoration-none text-dark' %></button>
+    </p>
+
+  </div>  
+</section> 

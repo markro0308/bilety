@@ -1,27 +1,26 @@
-<div class="d-flex flex-column justify-content-center mx-auto" >
+
   <%- if controller_name != 'sessions' %>
-    <%= link_to "Zaloguj się", new_session_path(resource_name) %><br />
+    <%= link_to "Zaloguj się", new_session_path(resource_name), :class => 'text-light' %>
   <% end %>
 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-    <%= link_to "Zarejestruj się", new_registration_path(resource_name) %><br />
+    <%= link_to "Zarejestruj się", new_registration_path(resource_name), :class => 'text-light' %>
   <% end %>
 
   <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-    <%= link_to "Zapomniałeś hasła?", new_password_path(resource_name) %><br />
+    <%= link_to "Zapomniałeś hasła?", new_password_path(resource_name), :class => 'text-light' %>
   <% end %>
 
   <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-    <%= link_to "Nie otrzymałeś instrukcji potwierdzenia?", new_confirmation_path(resource_name) %><br />
+    <%= link_to "Nie otrzymałeś instrukcji potwierdzenia?", new_confirmation_path(resource_name), :class => 'text-light' %>
   <% end %>
 
   <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
-    <%= link_to "Nie otrzymałeś instrukcji do odblokowania konta?", new_unlock_path(resource_name) %><br />
+    <%= link_to "Nie otrzymałeś instrukcji do odblokowania konta?", new_unlock_path(resource_name), :class => 'text-light' %>
   <% end %>
 
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to "Zarejestruj się poprzez #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), method: :post %><br />
+      <%= link_to "Zarejestruj się poprzez #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), method: :post, :class => 'text-light' %>
     <% end %>
   <% end %>
-</div>

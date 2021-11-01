@@ -1,8 +1,8 @@
-<div class="d-flex flex-column justify-content-center mx-auto" >
+<div id="event_list" class="d-flex flex-column align-items-center mx-auto" >
     <h1>Wszystkie wydarzenia</h1>
     <ul>
         <% for event in Event.all %>
-            <li><%= link_to event.artist, event %></li>
+            <li><%= link_to event.artist, event, :class => 'text-decoration-none text-info' %></li>
         <%end%>
     </ul>
 </div>

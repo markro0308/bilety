@@ -1,27 +1,29 @@
-<div class="d-flex flex-column justify-content-center mx-auto" >
-  <h2>Zmiana hasła</h2>
+<section class="jumbotron5 jumbotron-fluid w-100">
+  <div class="main_content d-flex flex-column align-items-center mx-auto" >
+    <h2>Zmiana hasła</h2>
 
-  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-    <%= f.hidden_field :reset_password_token %>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= f.hidden_field :reset_password_token %>
 
-    <div class="field">
-      <%= f.label :hasło, "Nowe hasło" %><br />
-      <% if @minimum_password_length %>
-        <em>minimum (<%= @minimum_password_length %> znaków)</em><br />
-      <% end %>
-      <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
-    </div>
+      <div class="field">
+        <%= f.label :hasło, "Nowe hasło" %><br />
+        <% if @minimum_password_length %>
+          <em>minimum (<%= @minimum_password_length %> znaków)</em><br />
+        <% end %>
+        <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+      </div>
 
-    <div class="field">
-      <%= f.label :potwierdź_hasło, "Potwierdź nowe hasło" %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
+      <div class="field">
+        <%= f.label :potwierdź_hasło, "Potwierdź nowe hasło" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
 
-    <div class="actions">
-      <%= f.submit "Zmień hasło", class:'btn btn-info' %>
-    </div>
-  <% end %>
+      <div class="actions mt-2 mb-2">
+        <%= f.submit "Zmień hasło", class:'btn btn-info' %>
+      </div>
+    <% end %>
 
-  <%= render "devise/shared/links" %>
-</div>
+    <%= render "devise/shared/links" %>
+  </div>
+</section>
