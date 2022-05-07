@@ -43,4 +43,7 @@ Opis konfiguracji środowiska i uruchomienia projektu:
 username=="admin"  
 password=="admin"
 
+Można wypróbować aplikację pod adresem:
+https://tranquil-headland-64181.herokuapp.com/
+
 
