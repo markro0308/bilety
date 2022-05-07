@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_06_15_210119) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: :cascade do |t|
     t.string "artist"
     t.text "description"
@@ -20,7 +23,6 @@ ActiveRecord::Schema.define(version: 2021_06_15_210119) do
     t.date "event_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "event_id"
   end
 
   create_table "tickets", force: :cascade do |t|
@@ -32,8 +34,8 @@ ActiveRecord::Schema.define(version: 2021_06_15_210119) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "phone"
-    t.integer "event_id"
-    t.integer "user_id"
+    t.bigint "event_id"
+    t.bigint "user_id"
     t.index ["event_id"], name: "index_tickets_on_event_id"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
