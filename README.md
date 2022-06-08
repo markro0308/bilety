@@ -10,7 +10,7 @@ Wykorzystane techonologie:
 	Bootstrap4 
 
 	Baza danych: 
-	SQLite
+	PostgreSQL
 
 Opis konfiguracji środowiska i uruchomienia projektu:
 
